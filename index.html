@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let car =
+        {
+            company: "Audi",
+            name: "R8",
+            engine: "krutoy",
+            fuel: "disiel",
+            color: "black",
+            display: function () {
+                document.write(this.company + "<br />")
+                document.write(this.name + "<br />")
+                document.write(this.engine + "<br />")
+                document.write(this.fuel + "<br />")
+                document.write(this.color + "<br />")
+            }
+        }
+
+        let serCar = JSON.stringify(car)
+        document.write(serCar + "<br />")
+
+
+        let DeSerCar = JSON.parse(serCar)
+        DeSerCar.display = function () {
+            document.write(this.company + "<br />")
+            document.write(this.name + "<br />")
+            document.write(this.engine + "<br />")
+            document.write(this.fuel + "<br />")
+            document.write(this.color + "<br />")
+        }
+        document.write("<br />")
+        DeSerCar.display()
+    </script>
+</body>
+
+</html>
